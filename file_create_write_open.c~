@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+
+int main {
+  // create and open the file for writing
+  FILE * writer;
+  writer = fopen("test.txt", "w");
+
+  // write some shit to the file
+  fprintf(writer, "Once I was a wooden boy\nA little wooden boy.");
+
+  // close the file for writing
+  fclose(writer);
+
+  // open the file for reading
+  FILE * reader;
+  reader = fopen("test.txt", "r");
+
+  // display the contents of the file
+  int c
+  while(!feof(reader)){
+    fgetc(c, reader);
+    putchar(c);
+  }
+      
+  // close the file for reading
+  fclose(reader);
+  
+  return 0;
+}

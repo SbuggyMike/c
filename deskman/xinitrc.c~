@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <uinstd.h>
+
+void edit_xinitrc(char * select_ptr){
+  // make a string with the user ID in it to find home directory
+  
+  // open the xinitrc file
+  FILE * xinitrc;
+  if(xinitrc = fopen(strncat(strncat("/home/", getlogin), "/.xinitrc", "rw") == NULL){
+      printf("xinitrc file not found.\n");
+      return;
+    }
+    
+  return;
+}

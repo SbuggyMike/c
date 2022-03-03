@@ -1,0 +1,25 @@
+char get_location(char * location){
+  //open config file
+  FILE * config;
+  config = fopen("config", "r");
+
+  //array to hold line
+  char line[256];
+
+  do {
+    fgets(line, 256, config);
+  }
+  while (line[0] != 'D' || line[1] != 'I' || line[2] != 'R');
+
+  // write the directory description in the line to string
+  int c, d;
+  for(c = 5; c < 265 && line[c] != '\0'; c++){
+    d = c - 5;
+    *(location + d) = line[c];
+  }
+
+  // close config file
+  fclose(config);
+
+  return ;
+}
